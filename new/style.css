@@ -1,0 +1,921 @@
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* О нас */
+
+
+/* btns */
+.buttonTrueBackground {
+    background-color: #a87b65;
+    color: white;
+    border: 2px solid #a87b65;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.buttonTrueBackground:hover {
+    background-color: #b48168;
+}
+
+.buttonFalseBackground {
+    background: none;
+    border: 3px solid #a87b65;
+    color: #a87b65;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.buttonFalseBackground:hover {
+    border: 3px solid #b48168;
+    color: #b48168;
+}
+
+
+/* btns */
+
+#modalAppInfo_text {
+align-items: center;
+flex-direction: column;
+}
+
+#modalAppInfo_text > h1 {
+    padding-top: 10px;
+    font-size: 36px;
+
+}
+
+#modalAppInfo_text > h2 {
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+#infoText {
+    width: 70%;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* Аккордеон с регистрацией */
+
+.authDisplay:not(button) {
+    color: white;
+}
+
+.authDisplay {
+    display: none;
+}
+
+@keyframes authDialogOpen {
+    0% {
+        opacity: 0.5;
+        margin-top: 0;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 5px;
+    }
+}
+
+@keyframes dialogAppClose {
+    0% {
+opacity: 1;
+margin-top: 5px;
+    }
+
+    100% {
+opacity: 0;
+margin-top: 0;
+    }
+}
+
+#authDialogApp {
+    background-color: green;
+    color: white;
+    border: none;
+    margin: auto;
+    margin-top: 5px;
+    top: 0;
+    padding: 5px;
+    animation: authDialogOpen .2s ease-in-out;
+}
+
+
+#accordeonReg {
+    display: none;
+    position: absolute;
+    background-color: wheat;
+    width: 300px;
+    height: min-content;
+    padding: 20px 0px 50px 0px;
+    top: 60px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+form > input {
+    background-color: #cecece;
+}
+
+#loginErrorEmpty {
+    background-color: darkred;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    top: 5px;
+}
+
+
+
+
+#authButton {
+    background: none;
+    color: white;
+    border: none;
+    width: fit-content;
+    padding: 5px;
+}
+
+#accordeonRegContent > h1 {
+color: white;
+text-align: center;
+padding: 10px;
+font-size: 24px;
+
+}
+
+#accordeonRegContent > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#accordeonRegContent > form > input {
+    padding: 10px;
+    width: fit-content;
+}
+
+#accordeonRegContent > form > input {
+    margin-top: 10px;
+}
+
+#accordeonRegContent > form > button {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+
+.modalAppSection {
+    display: none;
+    position: fixed;
+    align-self: center;
+    z-index: 1;
+    width: 95%;
+    height: 95%;
+    background-color: rgb(252, 252, 252);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow-y: scroll;
+    border: 3px solid black;
+}
+
+.modalContent {
+    display: none;
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    padding: 20px 0px 100px 0px;
+    flex-direction: column;
+
+}
+
+.modalContenAuthorAndDate {
+    width: 70%;
+    height: 5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+}
+
+.modalContenAuthorAndDate > article {
+    padding: 15px;
+}
+
+.modalAppText {
+    width: 70%;
+    font-size: 24px;
+    padding: 15px;
+}
+
+.modalAppText > h1 {
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.modalAppText > h2 {
+    font-size: 24px;
+    padding: 10px 20px;
+    border-left: 5px solid darkred;
+    color: darkred;
+}
+
+.modalContent > img{
+    width: 70%;
+    height: 60%;
+}
+
+/* Отступы на секции */
+.paddingOnSection {
+    padding: 50px 100px 50px 100px;
+}
+
+
+/* Кнопки */
+
+button {
+    width: min-content;
+    height: min-content;
+}
+
+.buttonTrueBackground {
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 24px;
+}
+
+.buttonFalseBackground {
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 24px;
+}
+
+/* Заголовоки блоков */
+
+.primaryZagolovok_center {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+/* Хэдер */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5px 20px 15px 20px;
+    height: min-content;
+    height: 30px;
+    background-color: rgb(27, 27, 27);
+    border-bottom: 3px solid #8a8a8a;
+}
+
+/* Навигация */
+#logo {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    text-decoration: none;
+
+}
+
+nav > a {
+color: white;
+text-decoration: none;
+}
+
+/* Главный экран */
+
+#glavnaya {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: gray;
+    padding: 0px 100px 0px 100px;
+    background-image: url(images/backgroundMainPage.png);
+    background-repeat: no-repeat;
+}
+
+/* Заголовок на главной странице */
+
+#zagolovokInGlavnaya {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#zagolovokInGlavnaya > h1 {
+    font-size: 46px;
+    width: 540px;
+    padding: 20px;
+    color: white;
+}
+
+#zagolovokInGlavnaya > button {
+    margin-left: 20px;
+}
+
+#zagolovokInGlavnaya > button:not(.buttonTrueBackground) {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Навигация по блокам страницы */
+
+.navBlockBase {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border: 3px solid #91705F;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#navOnBlocks {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+#navOnBlocks > span > a {
+    text-decoration: none;
+    color: white;
+}
+#navOnBlocks > span {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rdsNavButton {
+    background-image: url(images/navigationOnBlocks/RdsNavBackground.png);
+}
+
+#f1NavButton {
+    background-image: url(images/navigationOnBlocks/F1NavBackground.png);
+}
+
+#autocraftNavButton {
+    background-image: url(images/navigationOnBlocks/AutoCraftNavBackground.png);
+}
+
+#actionsNavButton {
+    background-image: url(images/navigationOnBlocks/ActionsBackground.png);
+}
+
+/* Черная линия */
+
+.blackLine {
+    background-color: black;
+    height: 50px;
+}
+
+/* Автомобилестроение */
+
+#autoCraftSection {
+    background-color: #202022;
+    height: min-content;
+}
+
+/* Контейнер новости */
+
+.newBase {
+    width: 400px;
+    height: 350px;
+    background-color: white;
+}
+
+/* Изображение новости */
+
+.imgBaseNew {
+    height: 200px;
+    width: 400px;
+}
+
+/* Раздел новости и дата  */
+
+.newBase > span {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    align-items: center;
+}
+
+/* Дата */
+
+.date {
+    text-align: end;
+}
+
+/* Текст ниже заголовка в новости */
+
+.newBase > h4 {
+font-weight: lighter;
+padding-left: 10px;
+padding-top: 5px;
+}
+
+/* Заголовок в новости */
+
+.newBase > h3 {
+    padding-left: 10px;
+}
+
+/* Тип новости */
+
+.nameNew {
+    font-weight: bold;
+    background-color: #E76D14;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px 20px 2px 20px;
+}
+
+.newsFlexContainer {
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Большая новость */
+
+.autoCraftBigNew {
+    background-image: url(images/autoCraft/BigNewAutocraft.png);
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-size: cover;
+    width: 820px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Раздел большой новости */
+
+.bigNewType {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #E76D14;
+    padding: 5px 25px;
+    border-radius: 5px;
+    width: fit-content;
+    height: min-content;
+    margin: 10px;
+}
+
+
+.bigNewTextLeft > span {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    
+}
+
+.bigNewTextLeft > h1 {
+    color: white;
+    font-size: 24px;
+    padding-left: 10px;
+    
+}
+
+.bigNewTextLeft > h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 10px;
+    opacity: 0.5;
+}
+
+.bigNewTextSection {
+    width: 820px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    background-color: rgba(0, 0, 0, 0.589);
+    
+    
+}
+
+
+
+.bigNewClock {
+    margin-bottom: 2px;
+}
+
+.binNewAuthor {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+}
+
+.binNewAuthor > img {
+    width: 50px;
+    height: 50px;
+}
+
+.binNewAuthor > h1 {
+color: white;
+font-size: 16px;
+}
+
+.binNewAuthor > h2 {
+color: white;
+font-size: 14px;
+font-weight: lighter;
+}
+
+/* Кнопка добавления новости в раздел Автомобилестроение */
+
+.addNewsAutocraft {
+    display: flex;
+    justify-content: center;
+}
+
+/* Продвижение новостей */
+#prodvizhenirSection {
+    background-color: #272727;
+    padding: 50px 100px 50px 100px;
+}
+
+
+
+
+.prodvizhenirBlock > h1 {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+
+.prodvizhenirBlock {
+    background-color: #333333;
+    height: min-content;
+    padding: 70px 50px;
+}
+
+.prodvizhenieBlockText {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 15px 0px;
+gap: 10px;
+}
+
+/* текст */
+
+
+.prodvizhenieBlockText > span > img {    
+width: 15px;    
+height: 15px;
+margin-top: 6px;
+
+}
+
+.prodvizhenieBlockText > span {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.prodvizhenieBlockText > span > p {
+color: white;
+font-size: 24px;
+padding-left: 3px;
+}
+
+.prodvizhenieBlockButton {
+text-align: center;
+}
+
+#prodvizhenieAllBlock_Flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Анимации */
+
+.imgBaseNew {
+transition: .2s;
+}
+
+.imgBaseNew:hover {
+height: 210px;
+}
+
+#f1Section {
+    display: flex;
+    flex-direction: column;
+        background-color: #202022;
+        height: min-content;
+}
+ 
+.modalCon {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalCon > h1 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+
+.modal {
+    display: none;
+    background-color: #333333;
+    padding: 50px 100px;
+    border-radius: 5px;
+    position: fixed;
+    align-self: center;
+    z-index: 1;
+    width: 70%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#formAddNews {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top: 20px;
+}
+
+#formAddNews > input {
+    padding: 10px;
+    
+}
+
+#formAddNews > button {
+    align-self: center;
+    padding: 10px;
+}
+
+@keyframes addNewDialogOpen {
+    0% {
+        opacity: 0.5;
+        top: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 10px;
+    }
+}
+
+@keyframes addNewdialogAppClose {
+0% {
+    opacity: 1;
+    top: 10px;
+}
+100% {
+    opacity: 0;
+    top: 0;
+}
+}
+
+
+#dialogAddNews {
+    margin: auto;
+    position: fixed;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    top:10px;
+    animation: addNewDialogOpen .2s ease-in-out;
+}
+
+
+#autoCraftSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.addNewsButton {
+    display: flex;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.F1name {
+    background-color: darkred;
+}
+
+#RDSsection {
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+}
+
+#race {
+    padding: 50px 0;
+}
+
+.etaps {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid black;
+}
+
+.etaps > h1 {
+    font-size: 48px;
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.226));
+}
+
+.dateEtap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.dateEtap > h1 {
+    font-size: 48px;
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.226));
+}
+
+.dateEtap > p {
+    font-size: 26px;
+    font-weight: bolder;
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.226));
+    text-align: center;
+}
+
+.buttonBuyTicket {
+    background-color: #a87b65;
+    color: white;
+    border: 2px solid #a87b65;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+    transition: .2s;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 15px 30px;
+}
+
+.buttonBuyTicket:hover {
+    background-color: #b48168;
+}
+
+#RDSrace_time {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+}
+
+#RDSnewsBottom {
+    padding-top: 50px;
+}
+
+#partners {
+    background-color: #202022;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.cardPartner {
+    color: white;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+    padding: 30px;
+    border: 1px solid #91705F;
+    border-radius: 5px;
+}
+
+.cardPartner > a {
+    color: rgb(228, 228, 228);
+    text-decoration: underline;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    transition: .2s;
+}
+
+.cardPartner > a:hover {
+    color: white;
+}
+
+.cardPartner > p {
+    border-left: 3px solid #E76D14;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.partnersCardImage {
+    max-width: fit-content;
+    border-radius: 10px;
+    border: 1px solid #91705F;
+}
+
+#actions {
+    background-color: #272727;
+}
+
+.actionCard {
+    width: min-content;
+    color: white;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.actionCard > h1 {
+    font-size: 32px;
+    padding-top: 10px;
+}
+
+.actionCard h2 {
+    font-weight: normal;
+}
+
+.actionCard img {
+    width: 400px;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.buttonBuyTicket_action {
+    width: fit-content;
+}
+
+.infoActions {
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.infoActions > p {
+    border-top: 2px solid #E76D14;
+    border-bottom: 2px solid #E76D14;
+    padding: 10px;
+}
+
+#formulaBigNew {
+    background-image: url(images/formula/formulaBig.png);
+}
+
+#rdsBigNew_one {
+    background-image: url(images/rds/RDSbigOne.png);
+}
+
+#RDSbigTwo {
+    background-image: url(images/rds/RDSbigTwo.png);
+}

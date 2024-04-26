@@ -1,0 +1,96 @@
+Стили ксс для проета, используемые чаще всего.
+
+.blackLine {
+    background-color: black;
+    height: 50px;
+}
+
+/* Заголовоки блоков */
+
+.primaryZagolovok_center {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.buttonTrueBackground {
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 24px;
+}
+
+.buttonFalseBackground {
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 24px;
+}
+
+.paddingOnSection {
+    padding: 50px 100px 50px 100px;
+}
+
+модалка
+
+главная секция
+.modalAppSection {
+    display: none;
+    position: fixed;
+    align-self: center;
+    z-index: 1;
+    width: 95%;
+    height: 95%;
+    background-color: rgb(252, 252, 252);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow-y: scroll;
+    border: 3px solid black;
+}
+
+артикль в секции
+.modalContent {
+    display: none;
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    padding: 20px 0px 100px 0px;
+    flex-direction: column;
+
+}
+
+дата в новости
+.modalContenAuthorAndDate {
+    width: 70%;
+    height: 5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+хуйня
+.modalContenAuthorAndDate > article {
+    padding: 15px;
+}
+
+текст в модалке новости
+.modalAppText {
+    width: 70%;
+    font-size: 24px;
+    padding: 15px;
+}
+
+изображение в модалке новости
+.modalContent > img{
+    width: 70%;
+    height: 60%;
+}
+
+.modalContenAuthorAndDate {
+    background-color: #333333;
+}
