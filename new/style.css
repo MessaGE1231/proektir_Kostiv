@@ -331,6 +331,16 @@ justify-content: center;
     margin-left: 20px;
 }
 
+#zagolovokInGlavnaya > button:not(:last-child) > a {
+    text-decoration: none;
+    color: white;
+}
+
+#zagolovokInGlavnaya > button:last-child > a {
+    text-decoration: none;
+    color: #b48168;
+}
+
 #zagolovokInGlavnaya > button:not(.buttonTrueBackground) {
     margin-left: 20px;
     margin-top: 10px;
@@ -463,16 +473,29 @@ padding-top: 5px;
 /* Большая новость */
 
 .autoCraftBigNew {
-    background-image: url(images/autoCraft/BigNewAutocraft.png);
     background-repeat: no-repeat;
-    background-position: 60%;
     background-size: cover;
     width: 820px;
     height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: .2s;
 }
+
+
+
+#autoCraftBig {
+    background-position: 60%;
+    background-image: url(images/autoCraft/BigNewAutocraft.png);
+    transition: .2s;
+}
+
+#autoCraftBig:hover {
+    background-position: 55%;
+}
+
+
 
 /* Раздел большой новости */
 
@@ -574,15 +597,15 @@ font-weight: lighter;
 .prodvizhenirBlock {
     background-color: #333333;
     height: min-content;
-    padding: 70px 50px;
+    padding: 80px 50px;
 }
 
 .prodvizhenieBlockText {
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 15px 0px;
-gap: 10px;
+padding: 50px 0px;
+gap: 30px;
 }
 
 /* текст */
@@ -601,7 +624,7 @@ align-items: center;
 gap: 20px;
 }
 
-.prodvizhenieBlockText > span > p {
+.prodvizhenieBlockText > span:not(:last-child) > p {
 color: white;
 font-size: 24px;
 padding-left: 3px;
@@ -618,6 +641,26 @@ text-align: center;
     margin-top: 40px;
     margin-bottom: 60px;
 }
+
+.costProdv {
+    justify-content: center;
+}
+
+.costProdv > p {
+    color: white;
+    font-size: 38px;
+    font-style: italic;
+}
+
+.costProdv > p > sup {
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+    color: rgba(255, 0, 0, 0.815);
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
 
 /* Анимации */
 
@@ -960,4 +1003,12 @@ footer {
 
 #footerBlockLeft p {
     font-size: 24px;
+}
+
+.primaryColorInText {
+    color: #E76D14;
+}
+
+.autoCraftBigNew:hover {
+    background-position: 55%;
 }

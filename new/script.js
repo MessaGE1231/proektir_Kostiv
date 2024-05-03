@@ -18,6 +18,16 @@ document.body.style.overflow = "unset"}
 })
 }
 
+function openDialogAuth(textCon, color) {
+    document.getElementById('dialogAddNews').textContent = textCon
+    document.getElementById('dialogAddNews').style.background = color
+    document.getElementById('dialogAddNews').toggleAttribute('open')
+    setTimeout(() => {document.getElementById('dialogAddNews').style.animation = 'addNewdialogAppClose .3s infinite'}, 2000)
+    setTimeout(() => {document.getElementById('dialogAddNews').toggleAttribute('open');document.getElementById('dialogAddNews').style.animation = 'addNewDialogOpen .2s ease-in-out'}, 2200)
+}
+
+
+
 
 const imgElementsHTML = document.body.querySelectorAll(".modalTrigger")
 imgElementsHTML.forEach((el) => {
@@ -283,14 +293,14 @@ document.body.addEventListener('keydown', (ev) => {
 
 })
 
+
+
 document.getElementById('addNewsAutocraftOpen').addEventListener('click', (ev) => {
     if (JSON.parse(localStorage.getItem('auth')) === true) {
     document.getElementById('modalAppAddNews').style.display = 'block'
     document.getElementById('modalAppAddNews').style.display === 'block' ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"
 } else {
-    document.getElementById('dialogAddNews').toggleAttribute('open')
-    setTimeout(() => {document.getElementById('dialogAddNews').style.animation = 'addNewdialogAppClose .3s infinite'}, 2000)
-    setTimeout(() => {document.getElementById('dialogAddNews').toggleAttribute('open');document.getElementById('dialogAddNews').style.animation = 'addNewDialogOpen .2s ease-in-out'}, 2200)
+    openDialogAuth('Вы не вошли в аккаунт', 'darkred')
 }
     
 
@@ -365,3 +375,18 @@ imgElementsHTML.forEach((el) => {
 localStorage.setItem('newsAdded', JSON.stringify(addedNews))
 
 })
+
+let list = document.getElementsByClassName('prodvBuyBtn')
+
+for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', (ev) => {
+        if (JSON.parse(localStorage.getItem('auth'))) {
+            openDialogAuth('Реквизиты для оплаты отправлены вам на почту', 'green')
+        } else {
+            openDialogAuth('Вы не вошли в аккаунт', 'darkred')
+        }
+    })
+}
+
+
+
